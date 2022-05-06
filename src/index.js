@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {compose, createStore} from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension';
 import {Provider} from 'react-redux'
 import {rootReducer} from './redux/rootReducer'
 
