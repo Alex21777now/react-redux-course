@@ -10,13 +10,14 @@ import {rootReducer} from './redux/rootReducer'
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
-const store = createStore(rootReducer, compose(
+/*const store = createStore(rootReducer, compose(
   applyMiddleware(
     thunk
   ),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-))
+))*/
 
 const app = (
   <Provider store={store}>
